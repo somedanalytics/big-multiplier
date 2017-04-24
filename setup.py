@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from pip.req import parse_requirements
-from distutils.core import setup
+from setuptools import setup
 
 import bigmultiplier
 
