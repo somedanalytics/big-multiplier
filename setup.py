@@ -1,12 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from distutils.core import setup
 
 import bigmultiplier
 
-try:
-    import pypandoc
-    long_description = pypandoc.convert('README', 'rst')
-except(IOError, ImportError):
-    long_description = open('README').read()
+long_description = open('README').read()
+
+require = ['numpy', 'scipy', 'Theano']
+
 
 
 setup(
@@ -16,6 +18,7 @@ setup(
     long_description=long_description,
     author=bigmultiplier.__author__,
     author_email='orcungumus@gmail.com',
+    install_requires=require,
     url='https://github.com/somedanalytics/big-multiplier',  # use the URL to the github repo
     download_url='https://github.com/guemues//big-multiplier/archive/1.0.tar.gz'
 )
