@@ -3,7 +3,9 @@
 from distutils.core import setup
 from pip.req import parse_requirements
 
-from bigmultiplier import __version__, __author__
+__version__ = "0.1"
+__author__ = "Can Aykul <aykul@somed.io>, Orcun Gumus <gumus@somed.io>"
+
 
 long_description = open('README.rst').read()
 

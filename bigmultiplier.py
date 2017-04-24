@@ -5,8 +5,6 @@
 
 """A function for multiply 2 big same size matrix"""
 
-__version__ = "0.1"
-__author__ = "Can Aykul <aykul@somed.io>, Orcun Gumus <gumus@somed.io>"
 
 
 import theano
