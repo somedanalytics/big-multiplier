@@ -5,7 +5,7 @@ from distutils.core import setup
 
 import bigmultiplier
 
-long_description = open('README').read()
+long_description = open('README.rst').read()
 
 install_reqs = parse_requirements("requirements.txt", session=False)
 reqs = [str(ir.req) for ir in install_reqs]
