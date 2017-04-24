@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from distutils.core import setup
 from pip.req import parse_requirements
-from setuptools import setup
 
 import bigmultiplier
 
@@ -19,5 +19,5 @@ setup(
     author_email='orcungumus@gmail.com',
     install_requires=reqs,
     url='https://github.com/somedanalytics/big-multiplier',  # use the URL to the github repo
-    download_url='https://github.com/guemues//big-multiplier/archive/1.0.tar.gz'
+    download_url='https://github.com/guemues/big-multiplier/archive/1.0.tar.gz'
 )
