@@ -21,5 +21,5 @@ setup(
     author_email='orcungumus@gmail.com',
     install_requires=reqs,
     url='https://github.com/somedanalytics/big-multiplier',  # use the URL to the github repo
-    download_url='https://github.com/guemues/big-multiplier/archive/1.0.tar.gz'
+    download_url='https://github.com/guemues/big-multiplier/archive/1.0.1.tar.gz'
 )

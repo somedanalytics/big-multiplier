@@ -11,7 +11,8 @@ from scipy import sparse
 import numpy as np
 
 # Tensor definitions
-
+import theano.sandbox.cuda
+theano.sandbox.cuda.use('gpu')
 x0 = tensor.matrix(name='x0', dtype='float32')
 x1 = tensor.matrix(name='x1', dtype='float32')
 y = theano.tensor.dot(x0, x1)
