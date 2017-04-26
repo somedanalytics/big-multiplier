@@ -26,7 +26,7 @@ def bigmultiplier(A, B, WIDTH=1000):
     :param A: The second matrix to be multiplied
     :type A: sparse.csr_matrix
     :type B: sparse.csr_matrix
-    :return: sparse.lil_matrix
+    :return: sparse.csr_matrix
     """
     result_matrix = sparse.lil_matrix(A.shape, dtype=np.float32)
 
@@ -53,8 +53,8 @@ def bigmultiplier(A, B, WIDTH=1000):
             val = multiply(x0=x0_, x1=x1_)
             result_matrix_row_start = row_block * rows_per_matrix
             result_matrix_col_start = column_block * rows_per_matrix
-            result_matrix[result_matrix_row_start: result_matrix_row_start + rows_per_matrix
-                        ,result_matrix_col_start:result_matrix_col_start + rows_per_matrix] = val
+            result_matrix[  result_matrix_row_start: result_matrix_row_start + rows_per_matrix,
+                            result_matrix_col_start: result_matrix_col_start + rows_per_matrix] = val
 
-    return result_matrix
+    return result_matrix.tocsr()
 

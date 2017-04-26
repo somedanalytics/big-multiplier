@@ -3,7 +3,7 @@
 from setuptools import setup
 from pip.req import parse_requirements
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "Can Aykul <aykul@somed.io>, Orcun Gumus <gumus@somed.io>"
 
 
