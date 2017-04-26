@@ -5,8 +5,6 @@
 
 """A function for multiply 2 big same size matrix"""
 
-
-
 import theano
 from theano import tensor, function
 from scipy import sparse
@@ -20,7 +18,7 @@ y = theano.tensor.dot(x0, x1)
 multiply = function([x0, x1], y)
 
 
-def calculate(A, B, WIDTH=1000):
+def bigmultiplier(A, B, WIDTH=1000):
     """
     A function for multiply 2 big same size matrix
     :param WIDTH: width of blocks
