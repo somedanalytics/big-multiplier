@@ -9,12 +9,8 @@ from scipy import sparse
 import numpy as np
 
 # Tensor definitions
-import theano.sandbox.cuda
-theano.sandbox.cuda.use('gpu')
-
 from theano import tensor, function
-from theano import tensor, function
-
+import theano
 
 x0 = tensor.matrix(name='x0', dtype='float32')
 x1 = tensor.matrix(name='x1', dtype='float32')
