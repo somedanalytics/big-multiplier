@@ -28,6 +28,7 @@ def bigmultiplier(A, B, WIDTH=1000):
     :type B: sparse.csr_matrix
     :return: sparse.csr_matrix
     """
+    print("MATRIX SIZE: {}".format(A.shape))
     result_matrix = sparse.lil_matrix(A.shape, dtype=np.float32)
 
     def num_blocks(rows_per_matrix, size_tuple):
@@ -38,6 +39,8 @@ def bigmultiplier(A, B, WIDTH=1000):
 
     rows_per_matrix = WIDTH if A.shape[0] > WIDTH else A.shape[0]
     num_blocks = num_blocks(rows_per_matrix=rows_per_matrix, size_tuple=A.shape)
+
+    print("Num blocks: {}".format(num_blocks))
 
     for row_block in range(0, num_blocks):
 
