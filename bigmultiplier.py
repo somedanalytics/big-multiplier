@@ -40,8 +40,6 @@ def bigmultiplier(A, B, WIDTH=1000):
     rows_per_matrix = WIDTH if A.shape[0] > WIDTH else A.shape[0]
     num_blocks = num_blocks(rows_per_matrix=rows_per_matrix, size_tuple=A.shape)
 
-    print("Num blocks: {}".format(num_blocks))
-
     for row_block in range(0, num_blocks):
 
         for column_block in range(0, num_blocks):
@@ -50,22 +48,16 @@ def bigmultiplier(A, B, WIDTH=1000):
             start_col = column_block * rows_per_matrix
             end_col = (start_col + rows_per_matrix) if (start_col + rows_per_matrix) <= A.shape[0] else A.shape[0]
 
-            start = time.time()
             x0_ = A[start_row:end_row, :].toarray()
             x1_ = B[:, start_col:end_col].toarray()
-            end = time.time(); print("{} {} seconds".format("Matrix preparation", end - start))
 
-            start = time.time()
             val = multiply(x0=x0_, x1=x1_)
-            end = time.time(); print("{} {} seconds".format("main multiply", end - start))
 
             result_matrix_row_start = row_block * rows_per_matrix
             result_matrix_col_start = column_block * rows_per_matrix
 
-            start = time.time()
             result_matrix[  result_matrix_row_start: result_matrix_row_start + rows_per_matrix,
                             result_matrix_col_start: result_matrix_col_start + rows_per_matrix] = val
-            end = time.time(); print("{} {} seconds".format("write", end - start))
 
     start = time.time()
     return_ = result_matrix.tocsr()
