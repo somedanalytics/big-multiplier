@@ -56,5 +56,5 @@ def bigmultiplier(A, B, WIDTH=1000):
             result_matrix[  result_matrix_row_start: result_matrix_row_start + rows_per_matrix,
                             result_matrix_col_start: result_matrix_col_start + rows_per_matrix] = val
 
-    return result_matrix
+    return result_matrix.tocsr()
 
