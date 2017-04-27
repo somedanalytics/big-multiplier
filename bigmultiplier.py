@@ -28,7 +28,7 @@ def bigmultiplier(A, B, WIDTH=1000):
     :type B: sparse.csr_matrix
     :return: sparse.csr_matrix
     """
-    result_matrix = sparse.csr_matrix(A.shape, dtype=np.float32)
+    result_matrix = sparse.lil_matrix(A.shape, dtype=np.float32)
 
     def num_blocks(rows_per_matrix, size_tuple):
         if (size_tuple[0] // rows_per_matrix) == size_tuple[0] / rows_per_matrix:
